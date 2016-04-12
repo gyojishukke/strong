@@ -9,7 +9,6 @@ require_once 'controllers.php';
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 echo "<small>route = $uri</small><br>";
 
-echo $uri;
 
 if('/index.php' === $uri)
 {

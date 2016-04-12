@@ -36,7 +36,7 @@
         <section class="content">
             
 
-            <?php echo $content ?>
+            <?php include 'carnet.php' ?>
 
         </section>
 

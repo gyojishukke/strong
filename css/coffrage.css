@@ -586,7 +586,7 @@ section {
     flex: row;
     display: inline-flex;
 /*    justify-content: flex-start;*/
-    width: 100%;
+    width: 100%; 
 
 /*    border: solid 1px red;*/
 }
