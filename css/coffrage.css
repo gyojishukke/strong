@@ -508,6 +508,8 @@ button[type=file] {
 .inLine {
     display: inline-block;
 }
+
+
 /*.inputCarnet {
     width: 100%;
 }*/
@@ -765,3 +767,20 @@ textarea {
 /*========== FIN CSS Responsive en construction===========*/
 
 
+li.titreRetourNote {
+    background: #B1AAA2;
+    width: 100%;
+    line-height: 0.2rem;
+    border-radius: 4px;
+    font-size: .8rem;
+    padding-left: 2px;
+}
+li.retourNote {
+    background: #fff;
+    margin: 3px 0px;
+    padding: 0 10px;
+    border-radius: 4px;
+    font-size: .8rem;
+    text-align: left;
+
+}
