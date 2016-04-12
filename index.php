@@ -74,10 +74,10 @@ elseif ('/index.php/login_init_post' === $uri )
 //*********************************************
 // change password 
 //*********************************************
-
-elseif ('/index.php/change_password' === $uri && isset($_GET['id'])) 
+ 
+elseif ('/index.php/change_password' === $uri && isset($_GET['id']) && isset($_GET['token'])) 
 {
-	change_password($_GET['id']) ;
+	change_password($_GET['id'],$_GET['token']) ;
 }
 
 elseif ('/index.php/lchange_password' === $uri )

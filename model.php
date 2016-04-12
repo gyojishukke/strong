@@ -105,3 +105,18 @@ function delete_token($id_utilisateur)
 	close_database_connection($dbh);
 	return $result;	
 }
+
+// ****************************************
+// test d du token
+// ****************************************
+function get_token($id_utilisateur, $token)
+{
+	$id    = $_GET['id'];
+	$token = $_GET['token'];
+	$stmt = $dbh->prepare("SELECT *  FROM tokens WHERE id_utilisateur= :id and token= :token and date_validite > now()");
+	$stmt->bindValue(':id',    $id,    PDO::PARAM_STR);
+	$stmt->bindValue(':token', $token, PDO::PARAM_STR);
+
+	$stmt->execute();
+	$token = $stmt->fetchall(PDO::FETCH_ASSOC);
+}
