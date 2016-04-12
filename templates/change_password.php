@@ -1,4 +1,38 @@
+<?php
+// ****************************************
+// test d du token
+// ****************************************
 
+
+if(isset($_GET['id']) && isset($$_GET['token']))
+    $id    = $_GET['id'];
+    $token = $_GET['token'];
+function get_token($id_utilisateur, $token)
+
+$resultat = get_token($id, $token)
+        if(!$resultat['email'])
+        {
+            $_SESSION['erreur']['login'] = "Votre email n'existe pas";
+            $erreur =true;
+        }
+
+$stmt = $dbh->prepare("SELECT *  FROM tokens WHERE id_utilisateur= :id and token= :token and date_validite > now()");
+$stmt->bindValue(':id',    $id,    PDO::PARAM_STR);
+$stmt->bindValue(':token', $token, PDO::PARAM_STR);
+
+$stmt->execute();
+$token = $stmt->fetchall(PDO::FETCH_ASSOC);
+if(!$token)
+{
+
+    $_SESSION['erreur']['login'] = "ce lien a expiré , veuillez reessayer de saisir un mot de passe !";
+        header('Location: /index.php/login');
+}
+else
+ {
+
+
+?>
 
 <?php ob_start() ?>
 <?php $titre = "changement de mot de passe"; ?>
