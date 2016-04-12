@@ -34,46 +34,33 @@
                 <div class="containerBouton pricing-tables pure-g">
                     <div class="containerBloc pure-u-1 pure-u-md-1-3">
                         <div class="pricing-table pricing-table-free">
-                        
+
                                 <div class="titreBoutonCarnet">
-                                    <span>votre</span>
+                                    <span>mon</span>
                                     <h2>CARNET</h2>
                                     <span>personnel</span>
                                 </div>
-                        
-                        
-
-
+                    
                             
                                 <div>
-
-
                                     <!-- Type d'activite -->
                                     <div class="pure-control-group">
                                         <select classe"pure-form" id="activite" name="activite">
                                             <option disabled selected>Type d'activité</option>
-                                            <?php  foreach ($activite as $value) {
-
-                                            ?>
-
-                                            <option value="<?= $value['id'] ?>"><?= $value['activite']  ?></option>
+                                            <?php  foreach ($activite as $value) { ?>
+                                                <option value="<?= $value['id'] ?>"><?= $value['activite']  ?></option>
                                             <?php } ?>
                                         </select>
-
                                     </div>
 
                                     <!-- Type d'exercice -->
                                     <div class="pure-control-group">
                                         <select classe"pure-form" id="exercice" name="exercice">
                                             <option disabled selected>Type d'exercice</option>
-                                            <?php  foreach ($exercice as $vale) {
-
-                                            ?>
-
-                                            <option value="<?= $vale['id'] ?>" class="<?= $vale['id_activite']?>"><?= $vale['exercice']  ?></option>
+                                            <?php  foreach ($exercice as $vale) { ?>
+                                                <option value="<?= $vale['id'] ?>" class="<?= $vale['id_activite']?>"><?= $vale['exercice']  ?></option>
                                             <?php } ?>
                                         </select>
-
                                     </div>
 
                                     <!-- Type d'epreuve -->
