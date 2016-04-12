@@ -633,45 +633,14 @@ h2 {
 footer {
     border-top: solid 2px #2C282C;
 }
-@media (max-width: 640px) {
-    main {
-    flex-direction: column;
-    }
-
-/*TODO : régler le manu de nav */
-    nav,
-    aside {
-        width: auto;
-
-/*        display: inline-block;*/
-        justify-content: space-between;
-        align-content: center;
-    }
-
-    .content {
-        flex-basis: auto;
-    }
-    nav {
-        order: 1;
-
-    }
-
-}
 
 
 
 
-/*#ligneBouton {
-    display: flex;
-}*/
-/*#login {
-    display: flex;
-    border: solid 1px red;
-    width: 100%;
-}*/
-/*#login > p {
-    width: 100%;
-}*/
+
+
+
+
 form {
     display: flex;
 /*    border: solid 1px red;*/
@@ -715,9 +684,39 @@ textarea {
 
 /*login responsive ===============*/
 
-@media (max-width:600px) {
+@media (max-width:650px) {
+
+    main {
+    flex-direction: column;
+    }
+
+/*TODO : régler le manu de nav */
+    nav,
+    aside {
+        width: auto;
+
+/*        display: inline-block;*/
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .content {
+        flex-basis: auto;
+    }
+    nav {
+        order: 1;
+
+    }
+    .containerBloc {
+    width: 90%;
+    margin-left: -15px;
+
+
+    }
+
     form {
         flex-direction: column;
+        
     }
     form p {
         display: block;
