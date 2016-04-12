@@ -10,7 +10,7 @@
 
 
 
-            <form id="inscription" method="POST" class="pure-form pure-form-aligned"  action="/index.php/inscription_post">
+            <form id="inscription" method="POST" class="pure-form pure-form-aligned"  action="/index.php/inscription_traitement">
 
                 <div>
 
