@@ -1,6 +1,6 @@
-<?php
 
-
+<?php ob_start() ?>
+<?php $titre = "Inscription"; ?>
 
 ?>
 <!-- ligne de boutons Carnet et forum -->
@@ -19,7 +19,7 @@
             <li>...</li>
         </ul>
 
-        <button name="accesCarnet" class="button-choose pure-button button-carnet" >Accès</button>
+        <button name="accesCarnet" href="/index.php/login" class="button-choose pure-button button-carnet" >Accès</button>
     </article>
 
     <article>
@@ -61,4 +61,5 @@
 </section> -->
 
 
-
+<?php $content = ob_get_clean() ?>
+<?php include "layoutBase.php" ?>

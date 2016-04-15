@@ -5,7 +5,7 @@ function open_database_connection()
 	
 	
 	try{
-		$dbh = new PDO('mysql:host=localhost;dbname=strong;charset=utf8','projetstack','123456');
+		$dbh = new PDO('mysql:host=localhost;dbname=strong;charset=utf8','root','');
 		// Meilleur mode pour la gestion des erreurs : (pas chercher à comprendre)
 		$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false); 
