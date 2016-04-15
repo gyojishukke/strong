@@ -1,12 +1,12 @@
 
 
 <?php ob_start() ?>
-<?php $titre = "connexion"; ?>
+<?php $titre = "changement de mot de passe"; ?>
 <div class="l-content">
     <div class="containerBouton pricing-tables pure-g">
         <div class="containerBloc pure-u-1 pure-u-md-1-3">
             <div class="pricing-table pricing-table-free">
-                <form method="POST" class="pure-form pure-form-aligned"  action="/index.php/login_post">
+                <form method="POST" class="pure-form pure-form-aligned"  action="/index.php/change_password_traitement">
                 <div>
                     <legend>Accès membres.</legend>
                     <div class="pure-control-group">
@@ -16,28 +16,13 @@
                     <div class="pure-control-group">
                         <input type="password" name="password" placeholder="Mot de passe">
                     </div>
-                    
-                    <div class="pure-control-group">
-                        <input type="text" placeholder="" disabled>
+                       <div class="pure-control-group">
+                        <input type="password" name="passwordConfirm" placeholder="Confirmer votre mot de passe">
                     </div>
+                   
                     <div class="pure-control-group">
-                        <input type="text" placeholder="" disabled>
+                        <button type="submit" name ="valider" class="pure-button pure-button-primary buttonGo">Valider</button>
                     </div>
-                    <div class="pure-control-group">
-                        <input type="text" placeholder="" disabled>
-                    </div>
-
-
-                    <!-- <label for="remember"> -->
-                    <!-- <input id="remember" type="checkbox">Se souvenir de moi. -->
-                    <!-- </label> -->
-                    <div class="pure-control-group">
-                        <button type="submit" name ="valider" class="pure-button pure-button-primary buttonGo">Connexion</button>
-                    
-                        <button type="button" name ="oubliLogin" href="/index.php/oublieLogin" class="pure-button pure-button-primary buttonGo">Mot de passe oublié</button>
-                    </div>
-                    
-                </div>
 
                  <?php
                 // Apparition du message d'erreur en cas de pseudo déja utulisé

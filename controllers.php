@@ -42,6 +42,7 @@ function inscription_traitement()
 	
 }
 //*********************************************
+<<<<<<< HEAD
 //  mot cde passe oublie 
 //*********************************************
 
@@ -55,6 +56,41 @@ function login_oublie_traitement()
 	if(isset($_POST['valider']))
 	{
 		require 'login_oublie_traitement.php';
+=======
+//  mot de passe oublie 
+//*********************************************
+
+function oublie_password() {
+	
+	require 'template/oublie_password.php';
+}
+		 
+function oublie_password_traitement() 
+{
+	if(isset($_POST['valider']))
+	{
+		require 'oublie_password_traitement.php';
+	}
+	
+	
+}
+//*********************************************
+//  changer son mdp
+//*********************************************
+
+function change_password($id) {
+	
+	require 'template/change_password.php';
+}
+		 
+function change_password_traitement() 
+
+
+{
+	if(isset($_POST['valider']))
+	{
+		require 'change_password_traitement.php';
+>>>>>>> yvan
 	}
 	
 	

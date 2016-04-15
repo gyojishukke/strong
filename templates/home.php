@@ -18,8 +18,12 @@
             <li>Suivi</li>
             <li>...</li>
         </ul>
+ 
+        <!--  on passe à la page login si on n'est pas connecté -->
+        <?php $lienCarnet= (isset($_SESSION['user']['id'])) ? "/index.php/accesCarnet" : "/index.php/login" ?>
+        <?php $lienForum= (isset($_SESSION['user']['id'])) ? "/index.php/accesForum" : "/index.php/login" ?>
+         <a href="<?php echo $lienCarnet ;?>" > <button type "button" name="accesCarnet"   class="button-choose pure-button button-carnet">Accès</button></a>
 
-        <button name="accesCarnet" href="/index.php/login" class="button-choose pure-button button-carnet" >Accès</button>
     </article>
 
     <article>
@@ -35,8 +39,8 @@
             <li>Compte-Rendus</li>
             <li>Bonnes affaires</li>
         </ul>
-
-        <button name="accesForum" class="button-choose pure-button button-forum" >Accès</button>
+        
+            <a href="<?php echo $lienForum ;?>"><button type "button"name="accesForum" class="button-choose pure-button button-forum" >Accès</button></a>
     </article>
 </section>
 
