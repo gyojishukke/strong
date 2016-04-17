@@ -1,3 +1,8 @@
+
+
+<?php ob_start() ?>
+<?php $titre = "Inscription"; ?>
+
 <!-- <div class="l-content">
     <div class="containerBouton pricing-tables pure-g">
         <div class="containerBloc pure-u-1 pure-u-md-1-3">
@@ -6,8 +11,6 @@
 
 
             <form id="inscription" method="POST" class="pure-form pure-form-aligned"  action="/index.php/inscription_post">
-
-
 
                 <div>
 
@@ -29,18 +32,11 @@
 <!--                     <p><label for="login">Login</label></p> -->
                         <input type="email" name="email" placeholder="email">
                     </p>
-                    <p>
-                        <input type="text" placeholder="<?php $_SESSION['erreur']['inscription'] ?>" disabled>
-                    </p>
+            
                 </div>
 
 
                 <div>
-
-                    <p>
-<!--                     <p><label for="login">Login</label></p> -->
-                        <input type="email" name="email" placeholder="email">
-                    </p>
 
                     <p>
 <!--                         <label for="password">password</label> -->
@@ -54,12 +50,21 @@
                         
 
                     <p>
-                        <button type="submit" name ="Inscription" class="pure-button pure-button-primary buttonGo">Inscription</button>
+                        <button type="submit" name ="valider" class="pure-button pure-button-primary buttonGo">Inscription</button>
                     </p>
                 </div>
 
+
+                 <?php
+                // Apparition du message d'erreur en cas de pseudo déja utulisé
+                    if(isset($_SESSION['erreur']['inscription']))
+                    {
+                        echo "<h4>". $_SESSION['erreur']['inscription']. "</h4>";
+                        echo "<br>";
+                        
+                    }
+                ?>  
+
             </form>
-
-
-<!--             </div>
-        </div> -->
+<?php $content = ob_get_clean() ?>
+<?php include "layoutBase.php" ?>
